@@ -13,11 +13,17 @@ print '> '
 guess = gets.chomp.to_i
 
 # Se o usuário acertar o preço, avisar que ele ganhou
-if guess == price
-  puts "The price was #{price}, you won!"
-else
+until guess == price
   puts 'Try again.'
+  puts 'Guess the price ($1 to $5)'
+  print '> '
+  guess = gets.chomp.to_i
 end
+
+puts "The price was #{price}, you won!"
+# if guess == price
+# else
+# end
 
 # TODO: Se o usuário não acertar, pedir uma nova tentativa até ele acertar o preço
 # TODO2: Refatorar o código usando until

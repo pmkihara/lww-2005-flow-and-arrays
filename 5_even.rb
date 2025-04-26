@@ -10,8 +10,11 @@ print '> '
 number = gets.chomp.to_i
 
 # Printar a mensagem se o número for par
-if number.even?
-  puts "Your number #{number} is even!"
-end
+puts "Your number #{number} is even!" if number.even?
+puts "Your number #{number} is even!" unless number.odd?
+
+# if number.even?
+#   puts "Your number #{number} is even!"
+# end
 
 # TODO: Refatorar o código usando inline conditionals

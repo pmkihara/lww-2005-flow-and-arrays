@@ -11,13 +11,15 @@ print '> '
 # Pegar a resposta do usuário e guardar em uma variável
 choice = gets.chomp
 
-result = if choice == coin
-           # Se o usuário acertar, returnar o valor "win"
-           'win'
-         else
-           # Se o usuário não acertar, returnar o valor "lose"
-           'lose'
-         end
+result = choice == coin ? 'win' : 'lose'
+
+# result = if choice == coin
+#            # Se o usuário acertar, returnar o valor "win"
+#            'win'
+#          else
+#            # Se o usuário não acertar, returnar o valor "lose"
+#            'lose'
+#          end
 
 # Printar o resultado
 puts "The coin was #{coin}. You #{result}!"
